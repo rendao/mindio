@@ -1,4 +1,4 @@
-# MindIO Psychology Counseling AI Agent System
+# Psychology Counseling AI Agent
 
 ## Overview
 MindIO is an AI-powered mental health counseling system designed to provide empathetic support through interactive dialogues. The system leverages advanced language models to deliver personalized responses, coping strategies, and mental health resources tailored to each user's needs.
@@ -12,7 +12,7 @@ MindIO is an AI-powered mental health counseling system designed to provide empa
 ## Project Structure
 The project is organized into several modules, each responsible for specific functionalities:
 
-- **src/**: Contains the main application code.
+- **/**: Contains the main application code.
   - **agents/**: Implements various agent types for handling user interactions.
   - **prompts/**: Contains system prompts and templates for guiding conversations.
   - **tools/**: Includes utility functions for emotional analysis.
@@ -21,7 +21,7 @@ The project is organized into several modules, each responsible for specific fun
 ## Installation
 1. Clone the repository:
    ```
-   git clone [<repository-url>](https://github.com/rendao/mindio.git)
+   git clone https://github.com/rendao/mindio.git
    ```
 2. Navigate to the project directory:
    ```
