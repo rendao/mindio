@@ -1,0 +1,26 @@
+[
+    {
+        "content": "Mindfulness is the practice of maintaining a nonjudgmental state of heightened or complete awareness of one's thoughts, emotions, or experiences on a moment-to-moment basis.",
+        "metadata": {"source": "mindfulness-definition", "category": "techniques"}
+    },
+    {
+        "content": "Cognitive Behavioral Therapy (CBT) is a form of psychotherapy that focuses on modifying dysfunctional emotions, behaviors, and thoughts by challenging and changing negative cognitive distortions.",
+        "metadata": {"source": "therapy-approaches", "category": "techniques"}
+    },
+    {
+        "content": "Deep breathing exercises can activate the parasympathetic nervous system, which controls the relaxation response. A simple technique is to breathe in through the nose for 4 counts, hold for 7 counts, and exhale through the mouth for 8 counts.",
+        "metadata": {"source": "relaxation-techniques", "category": "techniques"}
+    },
+    {
+        "content": "Regular physical exercise has been proven to reduce stress, anxiety, and symptoms of depression while boosting self-esteem and cognitive function.",
+        "metadata": {"source": "physical-health", "category": "wellness"}
+    },
+    {
+        "content": "Social support networks are crucial for mental health. Maintaining meaningful connections with family, friends, or support groups can provide emotional support, reduce isolation, and improve overall well-being.",
+        "metadata": {"source": "social-support", "category": "wellness"}
+    },
+    {
+        "content": "全国统一心理援助热线: 12356",
+        "metadata": {"source": "emergency-resources", "category": "resources"}
+    }
+]
