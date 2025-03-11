@@ -2,7 +2,6 @@ import os
 from typing import List, Dict, Any
 import json
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
 
 class KnowledgeBase:
     """Knowledge base for storing and retrieving information."""
