@@ -1,4 +1,4 @@
-# MindIO Psychology Counseling AI Agent System
+# Psychology Counseling AI Agent
 
 ## Overview
 MindIO is an AI-powered mental health counseling system designed to provide empathetic support through interactive dialogues. The system leverages advanced language models to deliver personalized responses, coping strategies, and mental health resources tailored to each user's needs.
