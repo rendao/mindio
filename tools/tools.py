@@ -74,7 +74,7 @@ class ToolRegistry:
             },
             "depression": {
                 "name": "PHQ-9 (Patient Health Questionnaire)",
-                "description": "A 9-item questionnaire used as a screening tool and severity measure for depression.",
+                "description": "A 9-item questionnaire used as a screening tool and severity measure for depression.(A thoughtful, personalized follow-up question or a transition to the analysis phase.)",
                 "questions": [
                     "Little interest or pleasure in doing things",
                     "Feeling down, depressed, or hopeless",

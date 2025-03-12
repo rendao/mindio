@@ -113,7 +113,7 @@ class Workflow:
         messages = [{"role": "system", "content": system_prompt}]
         
         # Include relevant conversation history (last 4 exchanges)
-        for item in self.conversation_history[-8:]:
+        for item in self.conversation_history[-18:]:
             messages.append(item)
             
         try:
@@ -199,7 +199,7 @@ class Workflow:
         messages = [{"role": "system", "content": system_prompt}]
         
         # Include relevant conversation history (last 8 exchanges)
-        for item in self.conversation_history[-8:]:
+        for item in self.conversation_history[-18:]:
             messages.append(item)
             
         try:

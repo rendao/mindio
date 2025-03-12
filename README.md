@@ -3,6 +3,8 @@
 ## Overview
 MindIO is an AI-powered mental health counseling system designed to provide empathetic support through interactive dialogues. The system leverages advanced language models to deliver personalized responses, psychological testing, coping strategies, and mental health resources tailored to each user's needs.
 
+![MindIO Counseling Demo](docs/images/mindio_demo.png)
+
 ## Key Features
 - **Adaptive Conversation Flow**: Automatically transitions between different counseling stages based on user responses
 - **Knowledge-Enhanced Responses**: Integrates external knowledge bases to provide accurate information on mental health topics
@@ -61,6 +63,7 @@ The console interface supports several commands to manage your conversation hist
 ```
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
+
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.

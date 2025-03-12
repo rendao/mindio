@@ -1,3 +1,4 @@
 .env
 mindio.log
 /history/data
+/**/__pycache__

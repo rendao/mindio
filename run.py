@@ -73,10 +73,21 @@ def process_user_input(user_input):
         'role': 'user',
         'content': user_input
     })
-    
+
     # Execute current node with user input
     workflow = st.session_state.workflow
-    result = workflow.execute_node(st.session_state.current_node, user_input)
+    # Set current node in the workflow
+    current_node = st.session_state.current_node
+    try:
+        print("Using LLM for node selection", current_node, user_input)
+        current_node = workflow.select_node_with_llm(current_node, user_input)
+        print(f"Selected node: {current_node}")
+    except AttributeError:
+        print("No LLM found, using default node selection")
+        if hasattr(st.session_state.workflow, 'get_next_node'):
+            current_node = workflow.get_next_node(current_node)
+
+    result = workflow.execute_node(current_node, user_input)
     
     # Add assistant response to history
     if result:
@@ -84,13 +95,10 @@ def process_user_input(user_input):
             'role': 'assistant',
             'content': result
         })
-    
-    # Move to the next node in the workflow
-    st.session_state.current_node = workflow.get_next_node(st.session_state.current_node, user_input)
 
 def main():
     st.set_page_config(
-        page_title="MindIO Chat",
+        page_title="Mind Chat",
         page_icon="🧠",
         layout="centered"
     )
@@ -138,7 +146,7 @@ def main():
     """, unsafe_allow_html=True)
     
     # App title
-    st.title("MindIO Chat")
+    st.title("Mind Chat")
     
     # Display greeting message if it hasn't been shown yet
     if not st.session_state.greeting_shown:
