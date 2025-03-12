@@ -24,7 +24,6 @@ class Workflow:
         try:
             embedding_model = EmbeddingModel(provider="qwen")
             self.knowledge_base = KnowledgeBase(embedding_model)
-            # 
             # Load knowledge from files
             # use relative path
             self.knowledge_base.load_documents_from_json("data/knowledge.json")
@@ -35,7 +34,7 @@ class Workflow:
         except Exception as e:
             print(f"Error initializing knowledge base: {e}")
             self.knowledge_base = None
-    
+
     def select_node_with_llm(self, current_node_id, user_input):
         """Use LLM to intelligently select the next appropriate node based on user input"""
         

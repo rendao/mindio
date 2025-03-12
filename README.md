@@ -1,11 +1,12 @@
 # Psychology Counseling AI Agent
 
 ## Overview
-MindIO is an AI-powered mental health counseling system designed to provide empathetic support through interactive dialogues. The system leverages advanced language models to deliver personalized responses, coping strategies, and mental health resources tailored to each user's needs.
+MindIO is an AI-powered mental health counseling system designed to provide empathetic support through interactive dialogues. The system leverages advanced language models to deliver personalized responses, psychological testing, coping strategies, and mental health resources tailored to each user's needs.
 
 ## Key Features
 - **Adaptive Conversation Flow**: Automatically transitions between different counseling stages based on user responses
 - **Knowledge-Enhanced Responses**: Integrates external knowledge bases to provide accurate information on mental health topics
+- **Psychological Testing**: Offers standardized assessments for anxiety, depression, and stress with personalized feedback
 - **Multi-Provider Support**: Compatible with various AI providers including OpenAI, DeepSeek, Qwen, SilicoFlow, and Ollama
 - **Streamlined Chat Interface**: Clean, user-friendly interface focused on the counseling experience
 
@@ -14,6 +15,7 @@ The project is organized into several modules, each responsible for specific fun
 
 - **/**: Contains the main application code.
   - **agents/**: Implements various agent types for handling user interactions.
+  - **history/**: Save and Load conversations records.
   - **prompts/**: Contains system prompts and templates for guiding conversations.
   - **tools/**: Includes utility functions for emotional analysis.
 
@@ -48,6 +50,16 @@ python console.py
 ```
 Follow the on-screen prompts to interact with the counseling assistant.
 
+#### Command-Line Operations
+The console interface supports several commands to manage your conversation history:
+
+- **/h**: Display help and list available commands
+- **/s**: Save the current conversation to a file in the "history/data" directory
+- **/ls**: List all previously saved conversations
+- **/l [index]**: Load a conversation by its index number (as shown in /ls)
+- **/x**: Exit the application
+
+```
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
 
