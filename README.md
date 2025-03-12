@@ -18,6 +18,7 @@ The project is organized into several modules, each responsible for specific fun
 ### Contains the main application code.
 - **agents/**: Implements various agent types for handling user interactions.
 - **history/**: Save and Load conversations records.
+- **knowledge**: Contains structured knowledge bases for mental health topics, disorders, treatments, and coping strategies. Includes modules for knowledge retrieval and embedding-based search to enhance agent responses with evidence-based information.
 - **prompts/**: Contains system prompts and templates for guiding conversations.
 - **tools/**: Includes utility functions for emotional analysis.
 

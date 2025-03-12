@@ -1,0 +1,66 @@
+{
+  "techniques": [
+    {
+      "name": "Deep Breathing",
+      "description": "Slow, diaphragmatic breathing to activate relaxation response",
+      "instructions": [
+        "Find a comfortable position",
+        "Inhale slowly through your nose for 4 counts",
+        "Hold for 1-2 counts",
+        "Exhale slowly through your mouth for 6 counts",
+        "Repeat for 5-10 minutes"
+      ],
+      "benefits": [
+        "Reduces anxiety",
+        "Lowers heart rate",
+        "Improves focus"
+      ],
+      "suitable_for": [
+        "Anxiety",
+        "Panic",
+        "Stress"
+      ]
+    },
+    {
+      "name": "Progressive Muscle Relaxation",
+      "description": "Systematically tensing and relaxing muscle groups",
+      "instructions": [
+        "Starting with your feet, tense the muscles for 5-10 seconds",
+        "Release and notice the feeling of relaxation",
+        "Move upward through muscle groups",
+        "Focus on the contrast between tension and relaxation"
+      ],
+      "benefits": [
+        "Reduces physical tension",
+        "Improves body awareness",
+        "Aids sleep"
+      ],
+      "suitable_for": [
+        "Anxiety",
+        "Insomnia",
+        "Chronic pain"
+      ]
+    },
+    {
+      "name": "Thought Challenging",
+      "description": "Identifying and questioning negative thoughts",
+      "instructions": [
+        "Notice when you're having a negative thought",
+        "Write down the thought",
+        "Identify the thinking distortion (e.g., catastrophizing)",
+        "Look for evidence that contradicts the thought",
+        "Generate a more balanced alternative"
+      ],
+      "benefits": [
+        "Reduces rumination",
+        "Improves mood",
+        "Builds resilience"
+      ],
+      "suitable_for": [
+        "Depression",
+        "Anxiety",
+        "Low self-esteem"
+      ]
+    }
+  ]
+}

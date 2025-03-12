@@ -1,0 +1,71 @@
+{
+  "resources": [
+    {
+      "category": "Books",
+      "items": [
+        {
+          "title": "Feeling Good: The New Mood Therapy",
+          "author": "David D. Burns",
+          "description": "Classic text on cognitive behavioral therapy techniques",
+          "suitable_for": [
+            "Depression",
+            "Anxiety"
+          ]
+        },
+        {
+          "title": "The Mindful Way Through Depression",
+          "author": "Mark Williams, John Teasdale, Zindel Segal, Jon Kabat-Zinn",
+          "description": "Combines mindfulness practices with cognitive therapy",
+          "suitable_for": [
+            "Depression",
+            "Rumination"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Apps",
+      "items": [
+        {
+          "title": "Headspace",
+          "description": "Guided meditation and mindfulness practice",
+          "suitable_for": [
+            "Stress",
+            "Anxiety",
+            "Sleep problems"
+          ]
+        },
+        {
+          "title": "Woebot",
+          "description": "AI chatbot using CBT techniques",
+          "suitable_for": [
+            "Mild depression",
+            "Anxiety",
+            "Stress"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Websites",
+      "items": [
+        {
+          "title": "Calm.com",
+          "description": "Online meditation and relaxation resources",
+          "suitable_for": [
+            "Stress",
+            "Sleep problems"
+          ]
+        },
+        {
+          "title": "MoodGym",
+          "description": "Interactive CBT program for preventing depression",
+          "suitable_for": [
+            "Depression",
+            "Anxiety"
+          ]
+        }
+      ]
+    }
+  ]
+}

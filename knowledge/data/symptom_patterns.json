@@ -1,0 +1,38 @@
+{
+  "patterns": [
+    {
+      "name": "Persistent Depressive Pattern",
+      "symptoms": [
+        "Low mood lasting more than two weeks",
+        "Loss of pleasure",
+        "Sleep changes",
+        "Energy decrease",
+        "Concentration problems"
+      ],
+      "significance": "May indicate clinical depression requiring professional help",
+      "assessment_questions": [
+        "How long have you been feeling this way?",
+        "Has your sleep pattern changed?",
+        "Do you still enjoy activities you used to enjoy?",
+        "How is your energy level?"
+      ]
+    },
+    {
+      "name": "Generalized Anxiety Pattern",
+      "symptoms": [
+        "Persistent worry",
+        "Muscle tension",
+        "Sleep disturbance",
+        "Difficulty concentrating",
+        "Irritability"
+      ],
+      "significance": "May indicate generalized anxiety disorder",
+      "assessment_questions": [
+        "How often do you worry?",
+        "Do you find it hard to control your worry?",
+        "Do you feel physically tense?",
+        "How is your sleep quality?"
+      ]
+    }
+  ]
+}

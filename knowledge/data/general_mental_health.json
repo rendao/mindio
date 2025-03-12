@@ -1,0 +1,45 @@
+{
+  "concepts": [
+    {
+      "term": "Mental Health",
+      "definition": "A state of well-being in which an individual realizes their abilities, can cope with normal life stresses, work productively, and contribute to their community.",
+      "importance": "Mental health is fundamental to our collective and individual ability to think, express emotions, interact with each other, earn a living, and enjoy life."
+    },
+    {
+      "term": "Anxiety",
+      "definition": "A feeling of worry, nervousness, or unease about something with an uncertain outcome.",
+      "symptoms": [
+        "Excessive worry",
+        "Restlessness",
+        "Fatigue",
+        "Difficulty concentrating",
+        "Irritability",
+        "Sleep problems"
+      ]
+    },
+    {
+      "term": "Depression",
+      "definition": "A mood disorder causing a persistent feeling of sadness and loss of interest.",
+      "symptoms": [
+        "Persistent sadness",
+        "Loss of interest in activities",
+        "Changes in appetite",
+        "Sleep disturbances",
+        "Fatigue",
+        "Feelings of worthlessness"
+      ]
+    },
+    {
+      "term": "Stress",
+      "definition": "The body's reaction to harmful situations, whether real or perceived.",
+      "symptoms": [
+        "Headaches",
+        "Muscle tension",
+        "Chest pain",
+        "Fatigue",
+        "Sleep problems",
+        "Stomach upset"
+      ]
+    }
+  ]
+}

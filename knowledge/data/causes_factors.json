@@ -1,0 +1,48 @@
+{
+  "factors": [
+    {
+      "category": "Biological",
+      "examples": [
+        "Genetics",
+        "Brain chemistry",
+        "Hormones",
+        "Physical illnesses"
+      ],
+      "description": "Physical factors that can influence mental health",
+      "evidence": "Family history often shows patterns of certain conditions across generations"
+    },
+    {
+      "category": "Psychological",
+      "examples": [
+        "Trauma",
+        "Early life experiences",
+        "Personality traits",
+        "Coping mechanisms"
+      ],
+      "description": "Mental and emotional factors that shape responses to life events",
+      "evidence": "Adverse childhood experiences correlate with higher risk of mental health issues"
+    },
+    {
+      "category": "Environmental",
+      "examples": [
+        "Family dynamics",
+        "Social support",
+        "Work stress",
+        "Financial situation"
+      ],
+      "description": "External conditions that impact mental wellbeing",
+      "evidence": "Job loss and financial hardship often precede depression episodes"
+    },
+    {
+      "category": "Lifestyle",
+      "examples": [
+        "Sleep habits",
+        "Exercise",
+        "Nutrition",
+        "Substance use"
+      ],
+      "description": "Daily habits and choices that affect mental health",
+      "evidence": "Regular physical activity is associated with reduced anxiety symptoms"
+    }
+  ]
+}

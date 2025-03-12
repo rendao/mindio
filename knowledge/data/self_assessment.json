@@ -1,0 +1,40 @@
+{
+  "frameworks": [
+    {
+      "name": "DASS-21",
+      "description": "Depression Anxiety Stress Scales - measures negative emotional states",
+      "use_case": "Initial assessment of depression, anxiety and stress levels",
+      "example_questions": [
+        "I found it hard to wind down",
+        "I was aware of dryness of my mouth",
+        "I couldn't seem to experience any positive feeling at all"
+      ]
+    },
+    {
+      "name": "PHQ-9",
+      "description": "Patient Health Questionnaire - screens for depression",
+      "use_case": "Quick assessment of depression severity",
+      "example_questions": [
+        "Little interest or pleasure in doing things",
+        "Feeling down, depressed, or hopeless",
+        "Trouble falling or staying asleep, or sleeping too much"
+      ]
+    },
+    {
+      "name": "GAD-7",
+      "description": "Generalized Anxiety Disorder scale - screens for anxiety",
+      "use_case": "Quick assessment of anxiety severity",
+      "example_questions": [
+        "Feeling nervous, anxious, or on edge",
+        "Not being able to stop or control worrying",
+        "Worrying too much about different things"
+      ]
+    }
+  ],
+  "self_reflection_prompts": [
+    "When did you first notice these feelings?",
+    "What situations seem to make you feel better or worse?",
+    "Have you noticed any patterns in your thoughts when you feel this way?",
+    "How has this been affecting your daily life and relationships?"
+  ]
+}

@@ -1,12 +1,12 @@
-from typing import Dict, Any, Callable
+from typing import Dict, Any, Callable, List
 from models.chat import ChatModel
 from utils.logger import log
 from prompts.system import SYSTEM_PROMPT
 from prompts.agent import AGENT_PROMPT
-from prompts.agent import AVAILABLE_TOOLS
+from prompts.tools import AVAILABLE_TOOLS
 from prompts.assistent import get_assistant_prompt
-from knowledge.base import KnowledgeBase
-from models.embedding import EmbeddingModel
+from prompts.knowledge import AVAILABLE_KNOWLEDGE_BASES, get_knowledge_base
+from knowledge.manager import KnowledgeManager
 import json
 
 class Workflow:
@@ -20,20 +20,17 @@ class Workflow:
         # Conversation history to provide context for LLM
         self.conversation_history = []
         
-        # Initialize knowledge base
+        # Initialize knowledge manager
         try:
-            embedding_model = EmbeddingModel(provider="qwen")
-            self.knowledge_base = KnowledgeBase(embedding_model)
-            # Load knowledge from files
-            # use relative path
-            self.knowledge_base.load_documents_from_json("data/knowledge.json")
-            self.knowledge_base.add_document({
+            self.knowledge_manager = KnowledgeManager()
+            # Add emergency knowledge example
+            self.knowledge_manager.add_document({
                 "content": "When there is a possibility of self harm or injury to others, emergency calls should be made immediately：119。",
                 "metadata": {"source": "emergency-resources", "category": "resources"}
             })
         except Exception as e:
-            print(f"Error initializing knowledge base: {e}")
-            self.knowledge_base = None
+            print(f"Error initializing knowledge manager: {e}")
+            self.knowledge_manager = None
 
     def select_node_with_llm(self, current_node_id, user_input):
         """Use LLM to intelligently select the next appropriate node based on user input"""
@@ -81,6 +78,39 @@ class Workflow:
             print(f"Error calling LLM: {e}")
             return self.nodes[current_node_id]["next"]
     
+    def retrieve_relevant_knowledge(self, node_id: str, user_input: str) -> str:
+        """Retrieve knowledge relevant to the current node and user input"""
+        if not self.knowledge_manager or not user_input:
+            return ""
+            
+        knowledge_context = ""
+        try:
+            # Get knowledge bases specified for this node
+            node_info = self.nodes[node_id]
+            knowledge_bases = node_info.get("knowledge", [])
+            
+            if not knowledge_bases:
+                # If no specific knowledge bases are defined, perform a general search
+                relevant_docs = self.knowledge_manager.search(user_input, top_k=2)
+            else:
+                # Otherwise search only in the specified knowledge bases
+                relevant_docs = self.knowledge_manager.search_in_bases(
+                    user_input, 
+                    knowledge_bases,
+                    top_k=2
+                )
+                
+            if relevant_docs:
+                knowledge_context = "\n\nRelevant information from knowledge base (your answer must prioritize the use of knowledge):\n"
+                for i, doc in enumerate(relevant_docs):
+                    knowledge_context += f"{i+1}. {doc['content']}\n"
+                log('INFO', f"Retrieved knowledge for node {node_id}: {len(relevant_docs)} documents")
+                log('INFO', f"Knowledge context: {knowledge_context}")
+        except Exception as e:
+            print(f"Error retrieving knowledge: {e}")
+            
+        return knowledge_context
+    
     def generate_response_with_llm(self, node_id, user_input):
         """Use LLM to generate a dynamic response based on the node and user input"""
         
@@ -92,18 +122,8 @@ class Workflow:
         node_info = self.nodes[node_id]
         system_prompt = get_assistant_prompt(node_id, node_info)
         
-        # Retrieve relevant knowledge if available
-        knowledge_context = ""
-        if user_input and self.knowledge_base:
-            try:
-                relevant_docs = self.knowledge_base.search(user_input, top_k=2)
-                if relevant_docs:
-                    knowledge_context = "\n\nRelevant information from knowledge base(your answer must prioritize the use of knowledge):\n"
-                    for i, doc in enumerate(relevant_docs):
-                        knowledge_context += f"{i+1}. {doc['content']}\n"
-                    log('INFO', f"Knowledge context: {knowledge_context}")
-            except Exception as e:
-                print(f"Error retrieving from knowledge base: {e}")
+        # Retrieve relevant knowledge
+        knowledge_context = self.retrieve_relevant_knowledge(node_id, user_input)
         
         # Add knowledge to system prompt if available
         if knowledge_context:
@@ -112,7 +132,7 @@ class Workflow:
         # Prepare messages for the API call
         messages = [{"role": "system", "content": system_prompt}]
         
-        # Include relevant conversation history (last 4 exchanges)
+        # Include relevant conversation history (last 18 exchanges)
         for item in self.conversation_history[-18:]:
             messages.append(item)
             
