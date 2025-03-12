@@ -13,12 +13,11 @@ MindIO is an AI-powered mental health counseling system designed to provide empa
 ## Project Structure
 The project is organized into several modules, each responsible for specific functionalities:
 
-- **/**: Contains the main application code.
-  - **agents/**: Implements various agent types for handling user interactions.
-  - **history/**: Save and Load conversations records.
-  - **prompts/**: Contains system prompts and templates for guiding conversations.
-  - **tools/**: Includes utility functions for emotional analysis.
-
+### Contains the main application code.
+- **agents/**: Implements various agent types for handling user interactions.
+- **history/**: Save and Load conversations records.
+- **prompts/**: Contains system prompts and templates for guiding conversations.
+- **tools/**: Includes utility functions for emotional analysis.
 
 ## Installation
 1. Clone the repository:
