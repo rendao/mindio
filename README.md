@@ -53,7 +53,7 @@ Follow the on-screen prompts to interact with the counseling assistant.
 
 #### Command-Line Operations
 The console interface supports several commands to manage your conversation history:
-
+```
 - **/h**: Display help and list available commands
 - **/s**: Save the current conversation to a file in the "history/data" directory
 - **/ls**: List all previously saved conversations
