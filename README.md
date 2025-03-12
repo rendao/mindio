@@ -61,6 +61,7 @@ The console interface supports several commands to manage your conversation hist
 - **/x**: Exit the application
 
 ```
+
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
 
